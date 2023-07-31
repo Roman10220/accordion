@@ -1,0 +1,48 @@
+@import "./nullstyle.scss";
+body {
+	background-color: #082d52;
+	font-family:"Raleway", sans-serif;
+	font-weight: 400;
+}
+.wrapper {
+	min-height: 100%;
+
+}
+.accordion {
+	&__content {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 25px;
+	}
+
+	&__item {
+		border-radius: 10px;
+		padding: 20px 20px;
+		margin-bottom: 20px;
+		background-color: #fff;
+	}
+
+	&__title {
+		display: flex;
+		align-items: center;
+		// padding-top: 20px;
+		// padding-bottom: 20px;
+		cursor: pointer;
+		&::after {
+			content: '+';
+			font-size: 30px;
+			margin-left: auto;
+		}
+	}
+
+	&__title-active::after {
+		content: '-';
+	}
+
+	&__text {
+		max-height: 0px;
+		overflow: hidden;
+		transition: 1s ease max-height;
+	}
+}
+
